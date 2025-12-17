@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Animations -->
+  <style>
+    /* Gradient background animation */
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient {
+      background-size: 300% 300%;
+      animation: gradient 12s ease infinite;
+    }
+
+    /* Fade animation */
+    @keyframes fade {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade {
+      animation: fade 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+    <header class="text-gray-700 body-font shadow bg-white sticky top-0 z-50">
+  <div class="container mx-auto flex flex-wrap p-5 flex-row items-center">
+
+    <a href="index.html" class="flex title-font font-medium items-center text-gray-900">
+     <img src="shutterstock_507663301-1.jpg" class="w-34 h-34 rounded-full">
+      <span class="ml-3 text-xl">Fabrics Design</span>
+    </a>
+
+    <nav class="md:ml-auto flex flex-wrap items-center text-base gap-6">
+      <a href="index.html" class="hover:text-indigo-600">Home</a>
+      <a href="gallery.html" class="hover:text-indigo-600">Gallery</a>
+      <a href="booking.html" class="hover:text-indigo-600">Booking</a>
+      <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+      <a href="about.html" class="hover:text-indigo-600">About</a>
+    </nav>
+
+    <a href="booking.html"
+       class="ml-6 bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+      Book Now
+    </a>
+
+  </div>
+</header>
+
+</body>
+</html>
