@@ -1,57 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-  <!-- Custom Animations -->
-  <style>
-    /* Gradient background animation */
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .animate-gradient {
-      background-size: 300% 300%;
-      animation: gradient 12s ease infinite;
-    }
-
-    /* Fade animation */
-    @keyframes fade {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade {
-      animation: fade 1.5s ease-in-out;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Booking | Fabric Store</title>
 </head>
-<body>
-    <header class="text-gray-700 body-font shadow bg-white sticky top-0 z-50">
-  <div class="container mx-auto flex flex-wrap p-5 flex-row items-center">
 
-    <a href="index.html" class="flex title-font font-medium items-center text-gray-900">
-     <img src="shutterstock_507663301-1.jpg" class="w-34 h-34 rounded-full">
-      <span class="ml-3 text-xl">Fabrics Design</span>
-    </a>
+<body class="bg-gradient-to-r from-indigo-100 via-white to-indigo-200 min-h-screen">
 
-    <nav class="md:ml-auto flex flex-wrap items-center text-base gap-6">
+<!-- HEADER -->
+<header class="bg-white shadow">
+  <div class="container mx-auto flex p-5 items-center justify-between">
+    <h1 class="text-xl font-bold text-indigo-600">Fabric Store</h1>
+    <nav class="space-x-6 text-gray-700">
       <a href="index.html" class="hover:text-indigo-600">Home</a>
       <a href="gallery.html" class="hover:text-indigo-600">Gallery</a>
-      <a href="booking.html" class="hover:text-indigo-600">Booking</a>
+      <a href="booking.html" class="text-indigo-600 font-semibold">Booking</a>
       <a href="contact.html" class="hover:text-indigo-600">Contact</a>
       <a href="about.html" class="hover:text-indigo-600">About</a>
     </nav>
-
-    <a href="booking.html"
-       class="ml-6 bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
-      Book Now
-    </a>
-
   </div>
 </header>
+
+<!-- BOOKING FORM -->
+<section class="container mx-auto px-5 py-20">
+  <div class="max-w-3xl mx-auto bg-white p-10 rounded-xl shadow-lg">
+    
+    <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">
+      Book Your Fabric
+    </h2>
+
+    <form class="space-y-6">
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-gray-600 mb-1">Full Name</label>
+          <input type="text" class="w-full border rounded px-4 py-2 focus:ring-2 focus:ring-indigo-300">
+        </div>
+        <div>
+          <label class="block text-gray-600 mb-1">Phone Number</label>
+          <input type="tel" class="w-full border rounded px-4 py-2 focus:ring-2 focus:ring-indigo-300">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-gray-600 mb-1">Email Address</label>
+        <input type="email" class="w-full border rounded px-4 py-2 focus:ring-2 focus:ring-indigo-300">
+      </div>
+
+      <div>
+        <label class="block text-gray-600 mb-1">Fabric Type</label>
+        <select class="w-full border rounded px-4 py-2 focus:ring-2 focus:ring-indigo-300">
+          <option>Select Fabric</option>
+          <option>Cotton</option>
+          <option>Silk</option>
+          <option>Denim</option>
+          <option>Linen</option>
+          <option>Wool</option>
+        </select>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-gray-600 mb-1">Booking Date</label>
+          <input type="date" class="w-full border rounded px-4 py-2 focus:ring-2 focus:ring-indigo-300">
+        </div>
+        <div>
+          <label class="block text-gray-600 mb-1">Quantity (meters)</label>
+          <input type="number" class="w-full border rounded px-4 py-2 focus:ring-2 focus:ring-indigo-300">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-gray-600 mb-1">Message</label>
+        <textarea class="w-full border rounded px-4 py-2 h-28 focus:ring-2 focus:ring-indigo-300"></textarea>
+      </div>
+
+      <button class="w-full bg-indigo-600 text-white py-3 rounded-lg text-lg hover:bg-indigo-700 transition">
+        Confirm Booking
+      </button>
+
+    </form>
+  </div>
+</section>
 
 </body>
 </html>
